@@ -1,0 +1,11 @@
+services:
+  postgresql:
+    image: postgres:12
+    volumes:
+      - ./docker/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: cable_chatter_development
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 12001:5432
